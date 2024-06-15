@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8" /><!--default-->
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="manifest" href="manifest.json">
+        <script src="app.js"></script>
+
+        <title>Solar Panel BMS</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Solar Panel BMS</h1>
+        </header>
+
+        <div class="section-container">
+            <div class="columns content">
+                <div class="content-container">
+                    <h5>Bienvenue sur notre site de projet E3 !</h5>
+                    <p>
+                        Ce site présente notre système de gestion de batterie alimenté par un panneau solaire. La borne de recharge solaire est présente 
+                        au niveau de la terasse de l'ESIEE (au niveau de l'EPI 5, près de la cafétéria).  
+                        Le site propose d'afficher l'état de charge de la batterie (en %), la courbe d'évolution de la tension de la batterie et du courant.
+                        L'architecture complète du système sous forme d'image vous est également proposée.
+                        Si vous rencontrez des difficultés avec la borne de recharge solaire merci de les signaler en cliquant sur ce <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpdifMXGjstHgrFnMBPL0B06JbaZWaC9qOb-g-LKjieyd5sw/viewform" target="_blank">lien</a>
+                    </p>
+                </div>
+            </div>
+            <div class="columns image">
+                <div class="image-container">
+                    <img src="media/Architecture.png" alt="Architecture">
+                </div>
+            </div>
+        </div>
+
+        <div id="gaugeContainer">
+            <h2>Pourcentage de la batterie</h2>
+            <canvas id="gaugeCanvas" width="300px" height="300"></canvas>
+            <div id="loadingMessage">Chargement en cours, veuillez patienter...</div>
+        </div>
+        
+        <div class="toggleBar" data-target="#iframe1">
+            <span>Graphique de Tension</span>
+            <span>+</span>
+        </div>
+        <div id="iframe1" class="iframe-container">
+            <iframe width="450" height="260" src="https://thingspeak.com/channels/2558267/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Battery+Voltage&type=line&xaxis=Time&yaxis=Voltage&yaxismax=20&yaxismin=0"></iframe>
+        </div>
+        
+        <div class="toggleBar" data-target="#iframe2">
+            <span>Graphique de Courant</span>
+            <span>+</span>
+        </div>
+        <div id="iframe2" class="iframe-container">
+            <iframe width="450" height="260" src="https://thingspeak.com/channels/2558267/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Current+Battery&type=line&xaxis=Time&yaxis=Ampere&yaxismax=10&yaxismin=0"></iframe>
+        </div>
+        
+        <div class="toggleBar" data-target="#iframe3">
+            <span>Graphique de Puissance</span>
+            <span>+</span>
+        </div>
+        <div id="iframe3" class="iframe-container">
+            <iframe width="450" height="260" src="https://thingspeak.com/channels/2558267/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Power+Battery&type=line&xaxis=Time&yaxis=Watt&yaxismax=1000&yaxismin=0"></iframe>
+        </div>
+
+        <footer></footer>
+</body>
+</html>                

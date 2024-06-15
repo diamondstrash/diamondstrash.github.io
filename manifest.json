@@ -1,0 +1,17 @@
+{
+    "lang": "FR-fr",
+    "name": "Solar Panel BMS",
+    "short_name": "Solar Panel BMS",
+    "description": "Lorem ipsum",
+    "start_url": "/",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "media/512.png",
+            "sizes": "512x512"
+        }
+    ]
+}
