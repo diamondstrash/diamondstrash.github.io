@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css"/>
         <link rel="manifest" href="manifest.json">
-        <script src="app.js"></script>
+        <link rel="shortcut icon" href="./assets/icons/icon-128x128.png">
 
         <title>Solar Panel BMS</title>
     </head>
@@ -49,7 +49,7 @@
             <span>+</span>
         </div>
         <div id="iframe1" class="iframe-container">
-            <iframe width="425" height="260" src="https://thingspeak.com/channels/2558267/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Battery+Voltage&type=line&xaxis=Time&yaxis=Voltage&yaxismax=20&yaxismin=0"></iframe>
+            <iframe width="450" height="260" src="https://thingspeak.com/channels/2558267/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Battery+Voltage&type=line&xaxis=Time&yaxis=Voltage&yaxismax=20&yaxismin=0"></iframe>
         </div>
         
         <div class="toggleBar" data-target="#iframe2">
@@ -57,7 +57,7 @@
             <span>+</span>
         </div>
         <div id="iframe2" class="iframe-container">
-            <iframe width="425" height="260" src="https://thingspeak.com/channels/2558267/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Current+Battery&type=line&xaxis=Time&yaxis=Ampere&yaxismax=10&yaxismin=0"></iframe>
+            <iframe width="450" height="260" src="https://thingspeak.com/channels/2558267/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Current+Battery&type=line&xaxis=Time&yaxis=Ampere&yaxismax=10&yaxismin=0"></iframe>
         </div>
         
         <div class="toggleBar" data-target="#iframe3">
@@ -65,9 +65,11 @@
             <span>+</span>
         </div>
         <div id="iframe3" class="iframe-container">
-            <iframe width="425" height="260" src="https://thingspeak.com/channels/2558267/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Power+Battery&type=line&xaxis=Time&yaxis=Watt&yaxismax=1000&yaxismin=0"></iframe>
+            <iframe width="450" height="260" src="https://thingspeak.com/channels/2558267/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Power+Battery&type=line&xaxis=Time&yaxis=Watt&yaxismax=1000&yaxismin=0"></iframe>
         </div>
 
         <footer></footer>
+
+        <script src="app.js"></script>
 </body>
 </html>                
